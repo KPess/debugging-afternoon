@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import "./ShoppingCart.css";
 
 class ShoppingCart extends Component {
+
   render() {
+
+    // This.props.cart.map below is bugged - TypeError: Cannot read property 'map' of undefined
     let shoppingCartDisplay = this.props.cart.map((element, index) => {
       return (
         <div className="shopping-cart-product-container" key={index}>
